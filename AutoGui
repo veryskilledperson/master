@@ -1,0 +1,19 @@
+function NotificationCallBack(text)
+	if text == "No gui" then
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/veryskilledperson/auto-ui/main/autonoui'),true))()--autoclicker no gui
+
+    elseif text == "Gui" then
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/JustEzpi/ROBLOX-Scripts/main/ROBLOX_AutoClicker"))()--autoclick
+    end
+end
+local callback = Instance.new("BindableFunction",script)
+callback.OnInvoke = NotificationCallBack
+
+game.StarterGui:SetCore("SendNotification", {
+	Title = "Choose one";
+    Text = "Gui or No gui";
+    Duration = 9999999999;
+    Callback = callback;
+    Button1 = "No gui";
+    Button2 = "Gui";
+})
