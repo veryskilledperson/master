@@ -1,0 +1,12 @@
+for i,v in pairs(workspace:GetDescendants()) do
+	if v.Name == "kickpart2" and v:IsA("BasePart") then
+		v.CanCollide = false
+	    v.CanTouch = false
+end
+	end
+for i,v in pairs(workspace:GetDescendants()) do
+	if v.Name == "kickpart" and v:IsA("BasePart") then
+		v.CanCollide = false
+	    v.CanTouch = false
+end
+	end
